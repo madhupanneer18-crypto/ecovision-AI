@@ -1,0 +1,203 @@
+/* =========================================================
+   EcoVision AI - Modern Eco-Themed Dashboard Styling
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Main Body Typography */
+html, body, [class*="css"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Header Banner */
+.ecovision-banner {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
+    border-radius: 16px;
+    padding: 24px 30px;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(27, 67, 50, 0.25);
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ecovision-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ecovision-banner p {
+    font-size: 1.05rem;
+    opacity: 0.92;
+    margin-top: 8px;
+    margin-bottom: 0;
+    max-width: 800px;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(45, 106, 79, 0.12);
+    border-color: #52b788;
+}
+
+.feature-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1b4332;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Metric / KPI Cards */
+.eco-kpi-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.eco-kpi-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2d6a4f, #52b788);
+}
+
+.eco-kpi-val {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #1b4332;
+    margin: 6px 0 2px 0;
+}
+
+.eco-kpi-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #64748b;
+}
+
+/* Category Badges */
+.badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+}
+
+.badge-recyclable {
+    background-color: #d8f3dc;
+    color: #1b4332;
+    border: 1px solid #74c69d;
+}
+
+.badge-residual {
+    background-color: #ffe3e3;
+    color: #9b111e;
+    border: 1px solid #ffa8a8;
+}
+
+.badge-special {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #7dd3fc;
+}
+
+/* Bin Recommendation Box */
+.bin-box {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Disclaimer Banner */
+.disclaimer-card {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 5px solid #f59e0b;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-size: 0.88rem;
+    color: #92400e;
+    line-height: 1.5;
+}
+
+/* Guidance Advice Box */
+.guidance-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.guidance-card h4 {
+    color: #1b4332;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Sidebar Customization */
+[data-testid="stSidebar"] {
+    background-color: #f7faf8;
+    border-right: 1px solid #e6ede8;
+}
+
+/* Sleek Streamlit Button Overrides */
+div.stButton > button:first-child {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: all 0.2s ease;
+}
+
+/* Table Enhancements */
+div[data-testid="stTable"], div[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
