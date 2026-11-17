@@ -1,0 +1,116 @@
+{
+  "categories": {
+    "Plastic": {
+      "bin_name": "Yellow Bin / Plastics & Synthetics",
+      "color": "#FF7043",
+      "recyclable": true,
+      "resin_identification": [
+        {"code": 1, "acronym": "PET", "name": "Polyethylene Terephthalate", "common_items": "Water bottles, soda bottles, salad dressing containers", "curbside": true},
+        {"code": 2, "acronym": "HDPE", "name": "High-Density Polyethylene", "common_items": "Milk jugs, shampoo bottles, detergent jugs", "curbside": true},
+        {"code": 3, "acronym": "PVC", "name": "Polyvinyl Chloride", "common_items": "Pipes, vinyl siding, blister packs", "curbside": false},
+        {"code": 4, "acronym": "LDPE", "name": "Low-Density Polyethylene", "common_items": "Bread bags, grocery sacks, squeeze bottles", "curbside": "Store drop-off"},
+        {"code": 5, "acronym": "PP", "name": "Polypropylene", "common_items": "Yogurt tubs, medicine bottles, bottle caps", "curbside": true},
+        {"code": 6, "acronym": "PS", "name": "Polystyrene (Styrofoam)", "common_items": "Disposable foam cups, take-out clamshells, packing peanuts", "curbside": false},
+        {"code": 7, "acronym": "OTHER", "name": "Miscellaneous / Bioplastics", "common_items": "Multi-layer pouches, polycarbonate bottles, baby bottles", "curbside": false}
+      ],
+      "best_practices": [
+        "Rinse out food and liquid residues thoroughly.",
+        "Keep plastic caps screwed on bottles so they don't fall through sorting screens.",
+        "Do NOT place plastic bags in curbside bins (they tangle in sorting machinery).",
+        "Avoid black plastics as optical sorting infrared sensors often fail to detect carbon black pigment."
+      ]
+    },
+    "Glass": {
+      "bin_name": "Green / Glass Recycling Bin",
+      "color": "#26A69A",
+      "recyclable": true,
+      "best_practices": [
+        "Rinse jars and bottles lightly; labels do not need to be scraped off.",
+        "Separate metal and plastic lids (recycle lids in metal/plastic streams).",
+        "Never mix window panes, mirrors, drinking glasses, or Pyrex dishes with bottle glass (different melting temperatures).",
+        "Color sorting (clear, amber, green) helps maintain raw cullet value."
+      ]
+    },
+    "Metal": {
+      "bin_name": "Yellow / Metals Bin",
+      "color": "#FFA726",
+      "recyclable": true,
+      "best_practices": [
+        "Rinse food tins and beverage cans to prevent odor and pest attraction.",
+        "Crush aluminum cans if your municipality allows (saves collection transport volume).",
+        "Roll clean aluminum foil into a tight ball (at least 5cm / tennis-ball diameter).",
+        "Ensure aerosol cans are completely depressurized and empty before disposal."
+      ]
+    },
+    "Paper": {
+      "bin_name": "Blue / Paper Bin",
+      "color": "#42A5F5",
+      "recyclable": true,
+      "best_practices": [
+        "Keep paper dry and free of grease or cooking oil.",
+        "Small staples and paperclips are acceptable; modern hydrapulpers remove them with magnets.",
+        "Do NOT recycle thermal receipts (contain BPA/BPS coatings).",
+        "Do NOT recycle paper towels, facial tissues, or napkins (fibers are too short and often soiled)."
+      ]
+    },
+    "Cardboard": {
+      "bin_name": "Blue / Cardboard Bin",
+      "color": "#8D6E63",
+      "recyclable": true,
+      "best_practices": [
+        "Break down and flatten all shipping boxes to save bin space.",
+        "Remove styrofoam blocks, bubble wrap, and plastic air pillows.",
+        "For pizza boxes: tear off greasy cheese bottoms (put in trash/compost) and recycle clean tops.",
+        "Wax-coated produce boxes should go to compost or residual waste."
+      ]
+    },
+    "Trash / Residual": {
+      "bin_name": "Black / Grey Landfill Bin",
+      "color": "#78909C",
+      "recyclable": false,
+      "best_practices": [
+        "Bag tightly to prevent litter dispersal during municipal collection.",
+        "Never place lithium-ion batteries or electronics in household trash (fire hazard).",
+        "Compost kitchen vegetable peels, coffee grounds, and yard waste whenever possible.",
+        "Donate functional clothing, books, and household goods instead of discarding."
+      ]
+    }
+  },
+  "searchable_items": [
+    {"item": "Plastic Water Bottle", "category": "Plastic", "bin": "Yellow / Mixed Recycling", "recyclable": "Yes", "instructions": "Empty liquid, rinse, replace cap, and crush."},
+    {"item": "Milk Jug (HDPE #2)", "category": "Plastic", "bin": "Yellow / Mixed Recycling", "recyclable": "Yes", "instructions": "Rinse thoroughly, reattach cap."},
+    {"item": "Yogurt Container (PP #5)", "category": "Plastic", "bin": "Yellow / Mixed Recycling", "recyclable": "Yes", "instructions": "Rinse out all yogurt residue."},
+    {"item": "Plastic Grocery Bag", "category": "Plastic", "bin": "Store Drop-off ONLY", "recyclable": "Special", "instructions": "Do NOT put in curbside bin; return to supermarket collection bin."},
+    {"item": "Plastic Straw", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Too small for automated sorting machinery."},
+    {"item": "Plastic Cutlery", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Made from brittle polystyrene (#6); dispose in general trash."},
+    {"item": "Styrofoam Cup / Container", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Expanded polystyrene cannot be recycled curbside."},
+    {"item": "Black Plastic Takeout Container", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Optical sorting cameras cannot detect black carbon pigment."},
+    {"item": "Bubble Wrap", "category": "Plastic", "bin": "Store Drop-off / Reuse", "recyclable": "Special", "instructions": "Keep with plastic grocery bags for supermarket drop-off."},
+    {"item": "Soda Can (Aluminum)", "category": "Metal", "bin": "Yellow / Metals", "recyclable": "Yes", "instructions": "Rinse lightly. Extremely high recycling value."},
+    {"item": "Soup / Tin Food Can", "category": "Metal", "bin": "Yellow / Metals", "recyclable": "Yes", "instructions": "Rinse out food, push lid inside can."},
+    {"item": "Aluminum Foil", "category": "Metal", "bin": "Yellow / Metals", "recyclable": "Yes", "instructions": "Wipe off food, crumple into a ball at least 2 inches in diameter."},
+    {"item": "Aerosol Spray Can", "category": "Metal", "bin": "Yellow / Metals", "recyclable": "Yes (if empty)", "instructions": "Must be completely empty and depressurized."},
+    {"item": "Beer / Wine Glass Bottle", "category": "Glass", "bin": "Green / Glass", "recyclable": "Yes", "instructions": "Rinse clean. Infinitely recyclable."},
+    {"item": "Glass Food Jar (e.g. Pasta Sauce)", "category": "Glass", "bin": "Green / Glass", "recyclable": "Yes", "instructions": "Rinse clean, recycle metal lid separately in metal bin."},
+    {"item": "Broken Window / Mirror Glass", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Wrap securely in cardboard/paper for worker safety. Cannot melt with bottle glass."},
+    {"item": "Pyrex Cookware / Ceramic Mug", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Ceramics have different melting points and contaminate glass recycling."},
+    {"item": "Corrugated Delivery Box (Amazon / FedEx)", "category": "Cardboard", "bin": "Blue / Paper & Cardboard", "recyclable": "Yes", "instructions": "Flatten box completely, remove plastic air pouches."},
+    {"item": "Cereal Box / Paperboard", "category": "Cardboard", "bin": "Blue / Paper & Cardboard", "recyclable": "Yes", "instructions": "Remove interior plastic cereal liner; flatten box."},
+    {"item": "Pizza Box (Clean Top)", "category": "Cardboard", "bin": "Blue / Paper & Cardboard", "recyclable": "Yes", "instructions": "Tear off the clean lid and recycle it."},
+    {"item": "Pizza Box (Greasy Bottom)", "category": "Trash / Compost", "bin": "Compost or Landfill", "recyclable": "No", "instructions": "Grease destroys paper fibers during water pulping."},
+    {"item": "Office Paper / Notebook Paper", "category": "Paper", "bin": "Blue / Paper", "recyclable": "Yes", "instructions": "Keep clean and dry. Staples are acceptable."},
+    {"item": "Newspaper & Magazines", "category": "Paper", "bin": "Blue / Paper", "recyclable": "Yes", "instructions": "Clean and dry; remove plastic sleeves."},
+    {"item": "Paper Coffee Cup", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Contains a fused polyethylene plastic lining that prevents recycling."},
+    {"item": "Receipt Paper (Thermal)", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Contains bisphenol (BPA) chemical coating."},
+    {"item": "Paper Towels / Napkins", "category": "Trash / Compost", "bin": "Compost or Landfill", "recyclable": "No", "instructions": "Fibers are too short to reprocess; compost if non-greasy."},
+    {"item": "Milk / Juice Carton (Tetra Pak)", "category": "Paper / Carton", "bin": "Carton / Mixed Recycling", "recyclable": "Yes", "instructions": "Empty, rinse, and push straw/cap back in."},
+    {"item": "AA / AAA Alkaline Batteries", "category": "Hazardous Waste", "bin": "Battery Collection Kiosk", "recyclable": "Special", "instructions": "Never put in trash or curbside bin; drop off at retail kiosk."},
+    {"item": "Lithium-Ion / Phone Battery", "category": "Hazardous Waste", "bin": "E-Waste Depot", "recyclable": "Special", "instructions": "Major fire hazard! Tape terminals and take to e-waste recycling center."},
+    {"item": "LED / Incandescent Light Bulb", "category": "Trash / E-Waste", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Incandescent in trash. CFL fluorescent bulbs must go to hazardous drop-off."},
+    {"item": "Toothpaste Tube", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Composite layers of plastic and aluminum are not curbside recyclable."},
+    {"item": "Chip / Snack Bag (Mylar)", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Multi-layer foil-plastic pouch cannot be mechanically separated."},
+    {"item": "Old Clothes / Fabric Scraps", "category": "Textiles", "bin": "Textile Drop-off / Thrift", "recyclable": "Special", "instructions": "Donate usable clothes or bring to dedicated textile recycling bins."},
+    {"item": "Garden Hose / Extension Cord", "category": "Trash", "bin": "Black / Landfill", "recyclable": "No", "instructions": "Major tangler hazard! Shuts down sorting conveyor belts."},
+    {"item": "Shredded Paper", "category": "Paper / Compost", "bin": "Compost or Brown Paper Bag", "recyclable": "Conditional", "instructions": "Loose shreds blow everywhere; bag in paper bag or add to compost."}
+  ]
+}

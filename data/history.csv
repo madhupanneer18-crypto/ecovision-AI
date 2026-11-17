@@ -1,0 +1,8 @@
+timestamp,mode,primary_class,confidence,item_count,recyclable,co2_saved_kg,energy_saved_kwh,water_saved_l,source,notes
+2026-11-15 09:15:22,Classification,Plastic,0.96,1,Yes,0.08,0.15,2.5,Upload,Clear PET water bottle
+2026-11-15 10:04:11,Classification,Metal,0.98,1,Yes,0.17,0.6,4.0,Camera Snap,Aluminum soda can
+2026-11-15 11:22:45,Detection,"Multi-Item (Plastic, Glass, Metal)",0.91,3,Yes,0.56,1.17,7.7,Upload,"Detected 1 Glass, 1 Metal, 1 Plastic"
+2026-11-15 12:40:19,Classification,Cardboard,0.95,1,Yes,0.22,0.35,3.8,Sample,Corrugated packaging box
+2026-11-15 13:18:50,Classification,Paper,0.97,1,Yes,0.05,0.08,1.5,Upload,Printed office documents
+2026-11-15 14:05:32,Classification,Trash,0.93,1,No,0.0,0.0,0.0,Camera Snap,Multi-layer chip snack wrapper
+2026-11-15 15:30:14,Detection,"Multi-Item (Plastic, Residual)",0.89,4,Mixed,0.16,0.3,5.0,Upload,"Detected 2 Plastic, 2 Residual"
