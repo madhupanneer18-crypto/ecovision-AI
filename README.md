@@ -1,1 +1,118 @@
-# ecovision-AI
+# ♻️ EcoVision AI — Smart Waste Classification and Detection
+
+> **Automated Real-Time Waste Classification System Using Deep Learning.**
+
+EcoVision AI is an interactive Python and Streamlit web application powered by YOLOv8 and PyTorch convolutional neural networks. It automates municipal and household waste sorting by classifying single waste items, detecting multiple objects with bounding boxes, analyzing camera snapshots, and tracking environmental diversion metrics.
+
+---
+
+## 🌟 Key Features
+
+1. **Whole-Image Waste Classification**
+   - Classifies discarded items into 6 primary categories: **Plastic, Glass, Metal, Paper, Cardboard, Trash**.
+   - Generates interactive probability distribution bar charts with Plotly.
+   - Recommends the exact recycling bin container color and disposal checklist.
+   - Calculates estimated decomposition time and per-item carbon offset (kg CO2e).
+
+2. **Multiple-Object Waste Detection with Bounding Boxes**
+   - Localizes multiple objects simultaneously into 5 detection categories: **Glass, Metal, Paper, Plastic, Residual**.
+   - Renders sleek AI HUD bounding boxes with semi-transparent tinted overlays, high-contrast corner brackets, and confidence tags.
+   - User-tunable Confidence and IoU (NMS) threshold sliders.
+   - Category count breakdown and interactive individual object crop inspector.
+
+3. **Camera Photo Analysis**
+   - Live still-camera capture via Streamlit's camera input (`st.camera_input`).
+   - Switchable mode between Whole-Image Classification and Multi-Object Detection.
+   - Instant freeze-frame AI inference and one-click history logging.
+
+4. **Interactive Analytics Dashboard**
+   - KPI metrics: Total Scans, Items Diverted, Overall Diversion Rate (%), GHG Avoided (kg), Energy Saved (kWh).
+   - Plotly visual charts:
+     - Donut Chart: Waste Material Distribution
+     - Pie Chart: Recyclable vs Non-Recyclable Ratio
+     - Box Plot: Confidence Score Distribution across classes
+     - Bar Chart: Daily Scan Activity by mode
+   - Real-world environmental milestone equivalencies (car km avoided, smartphone charges, tree-years).
+
+5. **Prediction History & CSV Export**
+   - Persistent logging to `data/history.csv`.
+   - Multi-field filtering (by Mode, Recyclability, Input Source, and Keyword Search).
+   - One-click CSV audit report export.
+   - History management and reset capabilities.
+
+6. **Recycling & Disposal Guidance Encyclopedia**
+   - Searchable 35+ item directory ("Can I recycle this?").
+   - Detailed best practices and preparation steps for every material.
+   - Plastic Resin Identification Codes (RIC #1 to #7) reference guide.
+   - Interactive Carbon & Resource Savings Calculator.
+
+---
+
+## 🏗️ Project Architecture
+
+```
+Ecovision/
+├── .streamlit/
+│   └── config.toml                # Streamlit port, custom eco theme, upload limits
+├── assets/
+│   ├── css/
+│   │   └── style.css              # Custom styling, modern cards, badges, glowing KPI metrics
+│   └── samples/                   # Curated high-resolution test images
+│       ├── plastic_bottle.jpg
+│       ├── glass_bottle.jpg
+│       ├── metal_can.jpg
+│       ├── cardboard_box.jpg
+│       ├── paper_sheets.jpg
+│       ├── trash_residual.jpg
+│       └── multi_waste.jpg
+├── data/
+│   ├── history.csv                # Persistent prediction history log
+│   └── waste_knowledge_base.json  # Searchable item database and category guidelines
+├── models/
+│   ├── yolov8n.pt                 # YOLOv8 nano object detector
+│   ├── yolov8n-cls.pt             # YOLOv8 classification model
+│   └── waste_classifier.pth       # Fine-tuned 6-class deep learning classifier (97.3% Acc)
+├── src/
+│   ├── __init__.py
+│   ├── config.py                  # Classes, color palettes, waste metadata, constants
+│   ├── inference.py               # Deep learning & computer vision inference pipeline
+│   ├── analytics.py               # Interactive Plotly visualizations & KPI calculation
+│   ├── history_manager.py         # CSV logging, filtering, and export
+│   ├── eco_advisor.py             # Knowledge base retrieval & savings calculator
+│   └── train_waste_model.py       # Fine-tuning script for WasteNet classifier
+├── app.py                         # Main Streamlit web application
+├── requirements.txt               # Dependencies list
+└── README.md                      # Documentation
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+Ensure you have Python 3.10+ installed on your machine.
+
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the Web Dashboard
+```bash
+streamlit run app.py
+```
+The application will launch automatically in your browser at `http://localhost:8501`.
+
+---
+
+## 🏷️ Waste Categories
+
+| Task | Target Categories |
+| :--- | :--- |
+| **Classification (6 Categories)** | `Plastic`, `Glass`, `Metal`, `Paper`, `Cardboard`, `Trash` |
+| **Detection (5 Categories)** | `Glass`, `Metal`, `Paper`, `Plastic`, `Residual` |
+
+---
+
+## ⚠️ Important Disclaimer
+*Predictions are generated by deep learning models and may occasionally be inaccurate. Recycling regulations vary significantly by city, municipality, and local facility capabilities. When in doubt, always check with your local waste management authority.*
